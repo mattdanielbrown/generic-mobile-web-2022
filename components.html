@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Generic Mobile Web 2022 | Components</title>
+  <meta name="description" content="General mobile-first and mobile optimizations for general-purpose web projects.">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,shrink-to-fit=no,viewport-fit=cover"/>
+
+  <meta property="og:title" content="Generic Mobile Web 2022">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+	
+  <link rel="stylesheet" href="css/main.scss">
+	
+	<meta name="theme-color" content="#6000ff">
+</head>
+
+<body>
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Navigation 																								 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<nav>
+		<div class="mobile-nav-menu-control-wrapper">
+			<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
+			<label for="mobile-nav-control">Menu</label>
+		</div>
+		<ul>
+			<li><a href="index.html" tabindex="0">Home</a></li>
+			<li><a href="typography-headings.html" tabindex="0">Headings</a></li>
+			<li><a href="components.html" aria-current="page">Components</a></li>
+			<li><a href="#" tabindex="0">Link</a></li>
+		</ul>
+	</nav>
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Header 																										 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<header>
+		<hgroup>
+			<h1>
+				Mobile Web 2022
+				<small>Components</small>
+			</h1>
+		</hgroup>
+	</header>
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Main Page Content  																									 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<main>
+		<section>
+			<h2>Buttons</h2>
+			<ul class="button-list">
+				<li>
+					<button type="button">Default</button>
+				</li>
+				<li>
+					<button type="button" class="primary">Primary</button>
+				</li>
+				<li>
+					<button type="button" class="secondary">Secondary</button>
+				</li>
+				<li>
+					<button type="button" class="round">Rounded</button>
+				</li>
+				<li>
+					<button type="button" class="outline">Outline</button>
+				</li>
+				<!-- <li><button type="button" class="round primary">Rounded</button></li> -->
+				<!-- <li><button type="button" class="round secondary">Rounded</button></li> -->
+				<!-- <li><button type="button" class="round outline">Rounded</button></li> -->
+				<!-- <li><button type="button" class="primary outline">Outline</button></li> -->
+				<!-- <li><button type="button" class="secondary outline">Outline</button></li> -->
+			</ul>
+		</section>
+		
+		<section id="forms">
+			<h2>Form Elements</h2>
+			<form action="" id="demo-form" name="demo-form">
+				<fieldset>
+					<legend>Text-based Inputs</legend>
+					
+					<label for="text-input">Text Input</label>
+					<input type="text" name="text-input" id="text-input" placeholder="Abc..." maxlength="50">
+					
+					<label for="email-input">Email Input</label>
+					<input type="email" name="email-input" id="email-input" placeholder="username@example.com" maxlength="200">
+					
+					<label for="number-input">Numeric Input</label>
+					<input type="number" name="number-input" id="number-input" placeholder="1234..." maxlength="20">
+					
+					<label for="search-input">Search Input</label>
+					<input type="search" name="search-input" id="search-input" placeholder="{search query [parameters]}..." maxlength="50">
+					
+					<label for="url-input">URL Input</label>
+					<input type="url" name="url-input" id="url-input" placeholder="https://example.com..." maxlength="100">
+					
+					<label for="textarea-input">Textarea Input</label>
+					<textarea name="textarea-input" id="textarea-input" cols="30" rows="10" placeholder="Multiline textual input..."></textarea>
+				
+				</fieldset>
+				<fieldset>
+					<legend>Date &amp; Time Inputs</legend>
+					
+					<label for="date-input">Date Input</label>
+					<input type="date" id="date-input" name="date-input">
+					
+					<label for="time-input">Time Input</label>
+					<input type="time" id="time-input" name="time-input">
+					
+					<label for="datetime-local-input">Datetime Input</label>
+					<input type="datetime-local" id="datetime-local-input" name="datetime-local-input">
+				</fieldset>
+				<fieldset>
+					<legend>Checkbox Inputs</legend>
+					<ul class="checkbox-list">
+						<li>
+							<input type="checkbox" name="checkbox-input-one"
+							       id="checkbox-input-one"
+							       value="Checkbox Input One Value" checked>
+							<label for="checkbox-input-one">Checkbox Input One</label>
+						</li>
+						<li>
+							<input type="checkbox" name="checkbox-input-two"
+							       id="checkbox-input-two"
+							       value="Checkbox Input Two Value">
+							<label for="checkbox-input-two">Checkbox Input Two</label>
+						</li>
+						<li>
+							<input type="checkbox" name="checkbox-input-three"
+							       id="checkbox-input-three"
+							       value="Checkbox Input Three Value">
+							<label for="checkbox-input-three">Checkbox Input Three</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Radio Inputs</legend>
+					<ul class="radio-list">
+						<li>
+							<input type="radio" id="radio-input-one"
+							       name="radio-input"
+							       value="Radio Input One Value" checked>
+							<label for="radio-input-one">Radio Input One</label>
+						</li>
+						<li>
+							<input type="radio" id="radio-input-two"
+							       name="radio-input"
+							       value="Radio Input Two Value">
+							<label for="radio-input-two">Radio Input Two</label>
+						</li>
+						<li>
+							<input type="radio" id="radio-input-three"
+							       name="radio-input"
+							       value="Radio Input Three Value">
+							<label for="radio-input-three">Radio Input Three</label>
+						</li>
+					</ul>
+				</fieldset>
+				<ul class="bottom-form-controls">
+					<li><input type="submit" value="Submit"></li>
+					<li><input type="reset" value="Reset"></li>
+				</ul>
+			</form>
+		</section>
+	</main>
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Footer 																										 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<footer>
+		<p>Copyright &copy; 2022. All Rights Reserved.</p>
+	</footer>
+
+
+  <!-- ===================================================================== -->
+  <!-- Javascript	 																								 					 -->
+  <!-- ===================================================================== -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

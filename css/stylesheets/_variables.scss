@@ -1,0 +1,33 @@
+
+
+$fontstack--fallback : -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$fontstack--inter    : 'Inter', 'Inter UI', Inter, Inter UI;
+$fontstack           : $fontstack--inter, $fontstack--fallback;
+
+$txt-color       : #434343 !default;
+$bg-color        : #fff !default;
+$bg-color--alt   : ghostwhite !default;
+
+/* From OpenColor (https://yeun.github.io/open-color) */
+$_color-indigo   : #617ef2;
+$_color-violet   : #845ef7;
+$_color-red      : #ff6b6b;
+$_color-green    : #51cf66;
+$_color-orange   : #ff922b;
+$_color-gray8    : #343a40;
+
+/* Theme Colors */
+$primary-color   : $_color-indigo !default;
+$primary-color   : #5000ff;
+$color--primary  : $primary-color;
+$secondary-color : $_color-gray8 !default;
+$success-color   : $_color-green !default;
+$warning-color   : $_color-orange !default;
+$danger-color    : $_color-red !default;
+
+$_focus-fx-color : $color--primary;
+
+$base-fontsize   : 1.125em !default;
+
+$transition      : all 120ms ease-out !default;

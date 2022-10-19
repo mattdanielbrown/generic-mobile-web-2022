@@ -1,0 +1,29 @@
+@mixin min-width($size:560px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}
+
+@mixin minWidth($size:560px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}
+
+@mixin at-least($size:560px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}
+
+@mixin atLeast($size:560px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}
+
+@mixin after($size:560px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}

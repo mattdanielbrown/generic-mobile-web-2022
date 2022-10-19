@@ -1,0 +1,21 @@
+
+html {
+	box-sizing : border-box !important;
+	overflow-scrolling: auto;
+	scroll-behavior: auto;
+	@media screen and (max-device-width: 640px) {
+		overflow-scrolling : touch;
+	}
+	@supports (touch-action: manipulation) {
+		scroll-behavior: smooth;
+		overflow-scrolling: touch;
+	}
+}
+
+*, *::before, *::after {
+	box-sizing  : inherit !important;
+	font-family : $fontstack;
+	line-height : 1;
+	margin      : 0;
+	padding     : 0;
+}
