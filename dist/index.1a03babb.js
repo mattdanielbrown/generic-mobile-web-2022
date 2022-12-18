@@ -1,0 +1,2 @@
+"use strict";function main(){const e=document.getElementById("mobile-nav-control"),n=document.querySelector("nav"),t=document.querySelector("#mobile-nav-control ~ label");document.addEventListener("touchstart",(function(){}),!0),e.addEventListener("change",(function(){n.classList.toggle("displayed"),!0===this.checked?t.innerHTML="Close":t.innerHTML="Menu"}))}window.addEventListener("DOMContentLoaded",(()=>{console.log("DOM fully loaded and parsed"),main()}));
+//# sourceMappingURL=index.1a03babb.js.map
