@@ -1,75 +1,13 @@
 
-%button {
-	$_this-color     : #efefef;
-	
-	// $_focus-fx-color:$primary-primary;
-	
-	appearance       : none;
-	vertical-align   : middle;
-	user-select      : none;
-	cursor           : pointer;
-	font-weight      : 600;
-	font-size        : 1em;
-	padding          : 0.5em 0.75em;
-	border-radius    : 0.25em;
-	// background-color: #EFEFEF;
-	// border: 2px solid #EFEFEF;
-	border           : none !important;
-	background-color : $_this-color;
-	outline          : 2px solid $_this-color;
-	outline-offset   : -2px;
-	font-family      : inherit;
-	transform        : translate3d(0, 0, 0);
-	transition       : all 150ms ease;
-	letter-spacing   : 0.5px;
-	
-	display          : block;
-	width            : 100%;
-	margin           : 0 0 1.5em;
-	line-height      : 1.75;
-	
-	@media screen and (min-width : 560px) {
-		// line-height: 1;
-		// line-height : 1.25;
-		line-height : 1.5;
-		display   : inline-block;
-		width     : unset;
-		min-width : 6.5em;
-	}
-	
-	&:hover {
-		$_this-color     : darken($_this-color, 8%);
-		background-color : $_this-color;
-		outline-color    : $_this-color;
-	}
-	
-	&:focus {
-		$_this-color     : darken($_this-color, 8%);
-		background-color : $_this-color;
-		// border-color: $_this-color;
-		// border-color: $primary-color;
-		outline-color    : $color--primary;
-		// outline: 6px solid rgba($_focus-fx-color, 0.2);
-		// outline-offset: -2px;
-		box-shadow       : 0 0 0 3px rgba($_focus-fx-color, 0.2);
-	}
-	
-	&:active {
-		$_this-color     : darken($_this-color, 8%);
-		background-color : $_this-color;
-		outline-color    : $_this-color;
-		transform        : translate3d(0, 2px, 0);
-	}
-}
-
+//------------------------------------------------------------------------------
+// Lists
+//------------------------------------------------------------------------------
 
 ul, ol {
 	@extend %list-reset;
 }
 
-.button-list,
-.buttons-list,
-ul.buttons {
+.button-list, .buttons-list, ul.buttons {
 	justify-content : space-between;
 	@media screen and (max-width : 599px) {
 		width : 100%;
@@ -105,6 +43,62 @@ ul.buttons {
 	}
 }
 
+.checkbox-list, ul.checkboxes, .radio-list, ul.radios {
+	display         : flex;
+	flex-direction  : column;
+	text-align      : left;
+	justify-content : flex-start;
+	align-content   : center;
+	align-items     : center;
+	gap             : .5em;
+	vertical-align  : middle;
+	margin          : 0;
+	padding         : 0;
+	
+	li {
+		display         : flex;
+		width           : 100%;
+		flex-direction  : row;
+		vertical-align  : middle;
+		justify-content : flex-start;
+		// align-items: center;
+		// align-content: center;
+		margin          : 0;
+		padding         : 0;
+		gap             : .5em;
+		line-height     : 1;
+	}
+	
+	*, *::before, *::after {
+		// outline: solid 1px rgba(red,0.2);
+		// display: inline-block;
+		position       : relative;
+		box-sizing     : border-box !important;
+		// height: 1.5em;
+		line-height    : 1;
+		margin         : 0;
+		vertical-align : middle;
+	}
+	
+	[type='checkbox'], [type='radio'] {
+		vertical-align : middle;
+		// display: inline;
+		display        : inline-block;
+		// height: 100%;
+		appearance     : none;
+		
+	}
+	
+	label {
+		// vertical-align: baseline;
+		display : inline-block;
+		// height: 100%;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Hyperlinks (Anchors)
+//------------------------------------------------------------------------------
 a, a:link {
 	color           : $primary-color;
 	cursor          : pointer;
@@ -132,10 +126,72 @@ a, a:link {
 	}
 }
 
-/* Apply Button and Button-like Control Styles */
-button, .button, [role='button'],
-[type='button'], [type='reset'],
-[type='submit'] {
+//------------------------------------------------------------------------------
+// Buttons and Button-like Components
+//------------------------------------------------------------------------------
+
+%button {
+	$_this-color     : #efefef;
+	
+	// $_focus-fx-color:$primary-primary;
+	
+	appearance       : none !important;
+	vertical-align   : middle;
+	user-select      : none !important;
+	cursor           : pointer;
+	font-weight      : 600;
+	font-size        : 1em;
+	padding          : 0.5em;
+	border-radius    : 0.3em;
+	// background-color: #EFEFEF;
+	// border: 2px solid #EFEFEF;
+	border           : none !important;
+	background-color : $_this-color;
+	outline          : 2px solid $_this-color;
+	outline-offset   : -2px;
+	font-family      : inherit;
+	transform        : translate3d(0, 0, 0);
+	transition       : all 120ms ease-out;
+	letter-spacing   : 0.5px;
+	
+	display          : block;
+	width            : 100%;
+	margin           : 0 0 1.5em;
+	line-height      : 1.5;
+	
+	@media screen and (min-width : 560px) {
+		// line-height: 1;
+		// line-height : 1.25;
+		line-height : 1.5;
+		display   : inline-block;
+		width     : unset;
+		min-width : 6.5em;
+	}
+	
+	&:hover {
+		$_this-color     : darken($_this-color, 8%);
+		background-color : $_this-color;
+		outline-color    : $_this-color;
+	}
+	&:focus {
+		$_this-color     : darken($_this-color, 8%);
+		background-color : $_this-color;
+		// border-color: $_this-color;
+		// border-color: $primary-color;
+		outline-color    : $color--primary;
+		// outline: 6px solid rgba($_focus-fx-color, 0.2);
+		// outline-offset: -2px;
+		box-shadow       : 0 0 0 3px rgba($_focus-fx-color, 0.2);
+	}
+	&:active {
+		$_this-color     : darken($_this-color, 8%);
+		background-color : $_this-color;
+		outline-color    : $_this-color;
+		transform        : translate3d(0, 2px, 0);
+	}
+}
+
+button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 	@extend %button;
 	
 	&.primary {
@@ -149,14 +205,12 @@ button, .button, [role='button'],
 			background-color : $_this-color;
 			border-color     : $_this-color;
 		}
-		
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
 			outline-color    : $color--primary;
 			
 		}
-		
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
@@ -176,13 +230,11 @@ button, .button, [role='button'],
 			background-color : $_this-color;
 			outline-color    : $_this-color;
 		}
-		
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
 			outline-color    : $color--primary;
 		}
-		
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
@@ -210,20 +262,17 @@ button, .button, [role='button'],
 			background-color : rgba($_this-color, 0.1);
 			outline-color    : $_this-color;
 		}
-		
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : rgba($_this-color, 0.2);
 			outline-color    : $color--primary;
 		}
-		
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : rgba($_this-color, 0.3);
 			outline-color    : $_this-color;
 			transform        : translate3d(0, 2px, 0);
 		}
-		
 		&.primary {
 			$_this-color     : $primary-color;
 			background-color : $_this-color;
@@ -263,14 +312,12 @@ button, .button, [role='button'],
 				background-color : $_this-color;
 				outline-color    : $_this-color;
 			}
-			
 			&:focus {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
 				outline-color    : $color--primary;
 				
 			}
-			
 			&:active {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
@@ -295,12 +342,17 @@ button, .button, [role='button'],
 	}
 }
 
+//------------------------------------------------------------------------------
+// Navigation Bar (and It's Child Components)
+//------------------------------------------------------------------------------
+
 nav {
 	width            : 100%;
 	background-color : #333;
 	color            : white;
 	margin           : 0;
 	padding          : 0;
+	
 	ul {
 		gap             : 0;
 		text-align      : center;
@@ -327,12 +379,10 @@ nav {
 					color            : darken(white, 8%);
 					background-color : darken(#333, 8%);
 				}
-				
 				&:focus {
 					color            : darken(white, 16%);
 					background-color : darken(#333, 16%);
 				}
-				
 				&:active {
 					color            : darken(white, 24%);
 					background-color : darken(#333, 24%);
@@ -382,6 +432,10 @@ nav {
 	}
 }
 
+//------------------------------------------------------------------------------
+// Forms and Form Inputs
+//------------------------------------------------------------------------------
+
 form, fieldset, legend {
 	display     : block;
 	width       : 100%;
@@ -394,6 +448,7 @@ form, fieldset, legend {
 	font-family : $fontstack;
 	line-height : 1;
 }
+
 form {
 	// background-color: ghostwhite;
 	padding : .5em 0;
@@ -408,6 +463,7 @@ legend {
 	line-height : 1;
 	margin      : 0 auto .25rem;
 }
+
 label {
 	font-size   : 1em;
 	font-weight : normal;
@@ -421,13 +477,10 @@ label {
 	cursor      : text;
 }
 
-[type='color'], [type='date'],
-[type='datetime'], [type='search'],
-[type='datetime-local'], [type='tel'],
-[type='email'], [type='month'],
-[type='number'], [type='password'],
-[type='text'], [type='time'], [type='url'],
-[type='week'], input:not([type]), textarea {
+[type='color'],[type='date'],[type='datetime'],[type='search'], [type='url'],
+[type='datetime-local'],[type='tel'],[type='email'],[type='month'],
+[type='number'],[type='password'],[type='text'],[type='time'],[type='week'],
+input:not([type]), textarea {
 	appearance       : none;
 	display          : block;
 	width            : 100%;
@@ -436,7 +489,7 @@ label {
 	font-weight      : normal;
 	color            : #333;
 	line-height      : 1.5;
-	padding          : .5em .75em;
+	padding          : .75em;
 	margin           : 0 auto;
 	border           : none;
 	outline          : 2px solid lightgray;
@@ -454,20 +507,19 @@ label {
 	
 	&:hover {
 		outline-color    : darken(lightgray, 5%);
-		background-color : darken(#fafafa, 5%);
+		background-color : darken(#fafafa, 3%);
 	}
-	
 	&:focus {
 		outline-color    : $primary-color;
-		background-color : darken(#fafafa, 10%);
-		box-shadow       : 0 0 0 3px rgba($primary-color, 0.2);
+		background-color : darken(#fafafa, 8%);
+		box-shadow       : 0 0 0 4px rgba($primary-color, 0.2);
 	}
-	
 	&:active {
-		outline-color    : darken(lightgray, 15%);
-		background-color : darken(#fafafa, 15%);
+		outline-color    : darken(lightgray, 10%);
+		background-color : darken(#fafafa, 10%);
 	}
 }
+
 textarea {
 	line-height : 1.5 !important;
 	resize      : vertical !important;
@@ -522,59 +574,7 @@ textarea {
 	opacity     : 1;
 }
 
-.checkbox-list, ul.checkboxes,
-.radio-list, ul.radios {
-	display         : flex;
-	flex-direction  : column;
-	text-align      : left;
-	justify-content : flex-start;
-	align-content   : center;
-	align-items     : center;
-	gap             : .5em;
-	vertical-align  : middle;
-	margin          : 0;
-	padding         : 0;
-	
-	li {
-		display         : flex;
-		width           : 100%;
-		flex-direction  : row;
-		vertical-align  : middle;
-		justify-content : flex-start;
-		// align-items: center;
-		// align-content: center;
-		margin          : 0;
-		padding         : 0;
-		gap             : .5em;
-		line-height     : 1;
-	}
-	
-	*, *::before, *::after {
-		// outline: solid 1px rgba(red,0.2);
-		// display: inline-block;
-		position       : relative;
-		box-sizing     : border-box !important;
-		// height: 1.5em;
-		line-height    : 1;
-		margin         : 0;
-		vertical-align : middle;
-	}
-	
-	[type='checkbox'], [type='radio'] {
-		vertical-align : middle;
-		// display: inline;
-		display        : inline-block;
-		// height: 100%;
-		appearance     : none;
-		
-	}
-	
-	label {
-		// vertical-align: baseline;
-		display : inline-block;
-		// height: 100%;
-	}
-}
+
 
 [type='checkbox'], [type='radio'] {
 	appearance : none;
@@ -734,6 +734,14 @@ textarea {
 			}
 		}
 		
+		
+		
+		
+		
+		
+		
+		
+		
 		&:hover {
 			& ~ label {
 				&::before {
@@ -769,6 +777,11 @@ textarea {
 [type='select'] {
 
 }
+
+
+//------------------------------------------------------------------------------
+// Mobile Navigation Control
+//------------------------------------------------------------------------------
 
 #mobile-nav-control {
 	all         : unset !important;
@@ -813,6 +826,7 @@ textarea {
 		}
 	}
 }
+
 .mobile-nav-menu-control-wrapper {
 	display : block;
 	@media screen and (min-width : 560px) {
@@ -846,35 +860,52 @@ textarea {
 }
 
 
-img {
-	display       : block;
-	width         : 100%;
-	margin        : 1em auto;
-	border-radius : 8px;
-	
-}
-figure {
-	background-color : whitesmoke;
-	padding          : .25em 1em 1em;
-	text-align       : center;
-	display          : block;
-	width            : 100%;
-	border-radius    : 16px;
-	// border: 2px solid darken(whitesmoke,5%);
-	// box-shadow: 0 16px 20px -4px rgba(black, 0.2);
-	img {
-		box-shadow    : 0 10px 16px -4px rgba(black, 0.3);
-		margin-bottom : 1em;
-		border-radius : 16px;
-		display       : block;
-	}
-	
-	figcaption {
-		display     : block;
-		width       : 100%;
-		line-height : 1.5;
-		font-size   : small;
-		font-weight : 500;
-		color       : gray !important;
+
+
+
+
+article {
+	&.card {
+		display : flex;
+		width : 100%;
+		margin : 1em auto;
+		flex-direction : column;
+		align-items : flex-start;
+		align-content : flex-start;
+		justify-content : flex-start;
+		overflow : hidden;
+		overflow-clip: clip;
+		border-radius :  1.5em;
+		background-color : ghostwhite;
+		max-width : 560px;
+		box-shadow : 0 12px 18px -4px rgba(#000,0.1);
+		header {
+			width : 100%;
+			img {
+				width : 100%;
+				height : auto;
+				background-size: cover;
+				background-origin: content-box;
+				background-position: left;
+				margin-top : -5em !important;
+				
+			}
+			
+			overflow : hidden;
+			max-height : 16em;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			display : block;
+			width : 100%;
+			text-align : left;
+			line-height : 1;
+			margin : 0 auto 1rem;
+		}
+		p {
+			display : block;
+			width : 100%;
+			text-align : left;
+			
+		}
 	}
 }
