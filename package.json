@@ -15,7 +15,7 @@
     "@parcel/packager-raw-url": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
     "@parcel/transformer-webmanifest": "^2.7.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.15.4"
   },
   "dependencies": {
     "bourbon": "^7.2.0",
